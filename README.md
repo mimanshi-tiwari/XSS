@@ -1,6 +1,6 @@
-#### XXS
+### XXS
 
-#### Vulnerabilities
+### Vulnerabilities
 
 ## User Sesson Hijack
 - When we are reading someting from url using search params, a random script can be added to our url in place of name which can execute a sciprt and steal our data.
