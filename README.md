@@ -1,8 +1,8 @@
-### XXS
+## XXS
 
-### Vulnerabilities
+## Vulnerabilities
 
-## User Sesson Hijack
+### User Sesson Hijack
 - When we are reading someting from url using search params, a random script can be added to our url in place of name which can execute a sciprt and steal our data.
 
 - Now a days browsers are smart to not allow script tag to be added to url but, there are still hacks that can be done.
@@ -13,19 +13,19 @@
 - and pass above to url ?name="malicious script"
 - the script executes and reads our cookies which is sensitive data.
 
-## Unauthorized activities
+### Unauthorized activities
 - OR, hacker may execute some function (API) written inside you code with malicious information. As it is your code it will have all authorization and access and will execute successfully
 
-## Capturing keystroke
+### Capturing keystroke
 - Or, Hacker can add script to track all key press events and get all data user is typing, which maybe be sensitive. eg password
 
-## Stealing critical Information
+### Stealing critical Information
 - Hacker can write script to pass entire document.body.innerHTML to some malicious endpoint, whcih may pass critical information along
 
-## phishing attact
+### phishing attact
 - Hacker and insert their own html in DOM which may look very much similar to original, eg a form which takes login credentials
 
-### [Mitigation]
+## Mitigation
 
 - List all possible ways to take you input
 
