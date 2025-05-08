@@ -1,6 +1,6 @@
 #### XXS
 
-#### [Vulnerabilities]
+#### Vulnerabilities
 
 ## User Sesson Hijack
 - When we are reading someting from url using search params, a random script can be added to our url in place of name which can execute a sciprt and steal our data.
@@ -27,24 +27,24 @@
 
 ### [Mitigation]
 
-## List all possible ways to take you input
+- List all possible ways to take you input
 
-## Use innerText or textContent in place of innerHTML - innerText will be pritext as syntax and not js code or dom element, it will be printed as norml string
+- Use innerText or textContent in place of innerHTML - innerText will be pritext as syntax and not js code or dom element, it will be printed as norml string
 
-## New modal of browser takes care of not executing script inject from url, it will be present but not execute, for older browser we need to handle by using innerText/textContent
+- New modal of browser takes care of not executing script inject from url, it will be present but not execute, for older browser we need to handle by using innerText/textContent
 
-## Use escaping mechnaism eg - const sanitizedName - name.replace(/</g, '&lt;').replace(/>/g, '&gt;') this will make any scipt inject to iur system non executable, the inject script will not be taken as dom element on execution but a string
+- Use escaping mechnaism eg - const sanitizedName - name.replace(/</g, '&lt;').replace(/>/g, '&gt;') this will make any scipt inject to iur system non executable, the inject script will not be taken as dom element on execution but a string
 
-## Using library React, all this sanitization is done behind the scene by React and other libraries for security purpose. This is provided out of the box.
+- Using library React, all this sanitization is done behind the scene by React and other libraries for security purpose. This is provided out of the box.
 
-## avaoid dangerouslysetinnerhtml, React allows this but should be avoided as they can be harmful. Use DOMPurify to sanitize your data if necessary.
+- avaoid dangerouslysetinnerhtml, React allows this but should be avoided as they can be harmful. Use DOMPurify to sanitize your data if necessary.
 
-## Use DOMPurify to sanitize your data DOMPurify.sanitize(name)
+- Use DOMPurify to sanitize your data DOMPurify.sanitize(name)
 
-## CSP Headers (Content Security Policy Headers) - it can be ser on server, decided what type of resources can be loaded and from where all it can be loaded, to avoid injection form third party. Event handling which script to inject can be handled.
+- CSP Headers (Content Security Policy Headers) - it can be ser on server, decided what type of resources can be loaded and from where all it can be loaded, to avoid injection form third party. Event handling which script to inject can be handled.
 
 - Decide Allowed Sources
 - Script Nonces
 - Report only mode, - form where and how many places attackes are being tried
 
-## Avoid using eval - it executes any code indside it, an be harmful
+- Avoid using eval - it executes any code indside it, an be harmful
